@@ -19,17 +19,26 @@ class HttpRequestTest {
     }
 
     fun getJSON(endpoint: String): String {
-        val urlString = URL + endpoint
+        try {
+            val urlString = URL + endpoint
 
-        val request = HttpRequest.newBuilder()
-            .GET()
-            .uri(URI.create(urlString))
-            .setHeader("Content-Type", "application/json")
-            .build()
+            val request = HttpRequest.newBuilder()
+                .GET()
+                .uri(URI.create(urlString))
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer YQKs02eXQOJiE4XhXjmkR961th3vwjqMRXRPPw2t")
+                .header("Content-Type", "application/json")
+                .build()
 
-        val response = httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+            val response = httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 
-        return response.thenApply { obj: HttpResponse<String> -> obj.body() }[5, TimeUnit.SECONDS]
+            return response.thenApply { obj: HttpResponse<String> -> obj.body() }[5, TimeUnit.SECONDS]
+        } catch (e: Exception) {
+            return "GET Exception"
+        } catch (e: InvocationTargetException) {
+            e.cause?.printStackTrace()
+            return "GET InvocationTargetException"
+        }
     }
 
     fun <T> postJSON(endpoint: String, body: T): String {
@@ -39,16 +48,16 @@ class HttpRequestTest {
 
             val request = HttpRequest
                 .newBuilder()
-            .uri(URI.create(urlString))
+                .uri(URI.create(urlString))
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                 .header("Accept", "application/json")
                 .header("Authorization", "Bearer YQKs02eXQOJiE4XhXjmkR961th3vwjqMRXRPPw2t")
                 .header("Content-Type", "application/json")
                 .build()
 
-        val response = httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+            val response = httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 
-        return response.thenApply { obj: HttpResponse<String> -> obj.body() }[5, TimeUnit.SECONDS]
+            return response.thenApply { obj: HttpResponse<String> -> obj.body() }[5, TimeUnit.SECONDS]
 //            return response.body()
         } catch (e: InvocationTargetException) {
             e.cause?.printStackTrace()
@@ -58,4 +67,27 @@ class HttpRequestTest {
             return "POST Exception"
         }
     }
+
+    fun <T> putJSON(endpoint: String, body: T, urlParameter: String): Unit {
+        try {
+            val urlString = URL + endpoint + urlParameter
+            val requestBody: String = Gson().toJson(body)
+
+            val request = HttpRequest
+                .newBuilder()
+                .uri(URI.create(urlString))
+                .PUT(HttpRequest.BodyPublishers.ofString(requestBody))
+                .header("Accept", "application/json")
+                .header("Authorization", "Bearer YQKs02eXQOJiE4XhXjmkR961th3vwjqMRXRPPw2t")
+                .header("Content-Type", "application/json")
+                .build()
+
+            val response = httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+        } catch (e: InvocationTargetException) {
+            e.cause?.printStackTrace()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
 }
