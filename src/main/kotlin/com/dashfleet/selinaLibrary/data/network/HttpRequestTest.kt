@@ -82,7 +82,8 @@ class HttpRequestTest {
                 .header("Content-Type", "application/json")
                 .build()
 
-            val response = httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+            httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+
         } catch (e: InvocationTargetException) {
             e.cause?.printStackTrace()
         } catch (e: Exception) {

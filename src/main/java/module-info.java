@@ -14,6 +14,11 @@ module com.dashfleet.selinaLibrary {
     requires retrofit2.converter.gson;
     requires kotlinx.coroutines.core;
     requires kotlinx.coroutines.javafx;
+    requires org.hibernate.orm.core;
+    requires java.persistence;
+    requires java.naming;
+    requires net.bytebuddy;
+
 
     opens com.dashfleet.selinaLibrary to javafx.fxml;
     exports com.dashfleet.selinaLibrary;

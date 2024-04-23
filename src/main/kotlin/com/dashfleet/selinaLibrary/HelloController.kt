@@ -1,5 +1,7 @@
 package com.dashfleet.selinaLibrary
 
+import com.dashfleet.selinaLibrary.data.database.HibernateUtil
+import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
 import com.dashfleet.selinaLibrary.data.model.login.LoginRequestBodyModel
 import com.dashfleet.selinaLibrary.data.network.WebServiceRepository
 import javafx.fxml.FXML
@@ -31,24 +33,39 @@ class HelloController {
         deviceName = "selina"
     )
 
+    private val configurationEntity = ConfigurationEntity(
+        host = "host_test",
+        time = "time_test",
+        mode = "mode_test",
+        actions = "actions_test",
+        hash = "hash_test",
+        id = 1
+    )
+
     @OptIn(DelicateCoroutinesApi::class)
     @FXML
     private fun onHelloButtonClick() {
         try {
-//            val httpRequest = HttpRequestTest()
-
             welcomeText.text = "Welcome to JavaFX Application!"
-//            val response: String = httpRequest.getJSON()
-
-//            val response: String = httpRequest.postJSON(
-//                endpoint = "sanctum/token",
-//                body = body
-//            )
 
             val response = webServiceRepository.loginSAE(loginBody)
 
-            apiResponseLB.text = "$response"
+            // Testing db
+            HibernateUtil.buildSessionFactory()
+            HibernateUtil.openSession()
 
+            val session = HibernateUtil.getCurrentSession()
+            val transaction = session.beginTransaction()
+
+            session.save(configurationEntity)
+
+            val config = session.get(ConfigurationEntity::class.java, 1)
+            transaction.commit()
+            session.close()
+            ///////////////////////////////////////////////////////
+
+            apiResponseLB.text = "${config.mode}"
+//            apiResponseLB.text = "$response"
 
         } catch (e: Exception) {
             Log.warning("Exception: ${e.stackTraceToString()}")
