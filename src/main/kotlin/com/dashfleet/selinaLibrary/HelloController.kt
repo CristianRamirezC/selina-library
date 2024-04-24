@@ -48,24 +48,25 @@ class HelloController {
         try {
             welcomeText.text = "Welcome to JavaFX Application!"
 
-            val response = webServiceRepository.loginSAE(loginBody)
+//            val response = webServiceRepository.loginSAE(loginBody)
 
             // Testing db
             HibernateUtil.buildSessionFactory()
-            HibernateUtil.openSession()
-
-            val session = HibernateUtil.getCurrentSession()
-            val transaction = session.beginTransaction()
-
-            session.save(configurationEntity)
-
-            val config = session.get(ConfigurationEntity::class.java, 1)
-            transaction.commit()
-            session.close()
+//            HibernateUtil.openSession()
+//
+//            val session = HibernateUtil.getCurrentSession()
+//            val transaction = session.beginTransaction()
+//
+////            session.save(configurationEntity)
+//
+////            val config = session.get(ConfigurationEntity::class.java, 1)
+//            transaction.commit()
+//            session.close()
             ///////////////////////////////////////////////////////
 
-            apiResponseLB.text = "${config.mode}"
+//            apiResponseLB.text = "${config.mode}"
 //            apiResponseLB.text = "$response"
+            apiResponseLB.text = "response"
 
         } catch (e: Exception) {
             Log.warning("Exception: ${e.stackTraceToString()}")

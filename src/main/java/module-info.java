@@ -19,6 +19,14 @@ module com.dashfleet.selinaLibrary {
     requires java.naming;
     requires net.bytebuddy;
 
+    requires java.xml.bind;
+    requires com.sun.xml.bind;
+    requires com.fasterxml.classmate;
+
+
+//    requires java.transaction;
+//    requires java.activation;
+
 
     opens com.dashfleet.selinaLibrary to javafx.fxml;
     exports com.dashfleet.selinaLibrary;
