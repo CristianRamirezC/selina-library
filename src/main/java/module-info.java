@@ -15,19 +15,22 @@ module com.dashfleet.selinaLibrary {
     requires kotlinx.coroutines.core;
     requires kotlinx.coroutines.javafx;
     requires org.hibernate.orm.core;
+
     requires java.persistence;
     requires java.naming;
     requires net.bytebuddy;
-
     requires java.xml.bind;
     requires com.sun.xml.bind;
     requires com.fasterxml.classmate;
 
-
 //    requires java.transaction;
 //    requires java.activation;
+    requires lombok;
+
 
 
     opens com.dashfleet.selinaLibrary to javafx.fxml;
     exports com.dashfleet.selinaLibrary;
+
+    opens com.dashfleet.selinaLibrary.data.database.entities;
 }

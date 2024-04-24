@@ -1,5 +1,6 @@
 package com.dashfleet.selinaLibrary
 
+import com.dashfleet.selinaLibrary.data.DDBBRepository
 import com.dashfleet.selinaLibrary.data.database.HibernateUtil
 import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
 import com.dashfleet.selinaLibrary.data.model.login.LoginRequestBodyModel
@@ -18,6 +19,7 @@ class HelloController {
 
     private val Log: Logger = Logger.getLogger(HelloController::class.java.name)
     private val webServiceRepository = WebServiceRepository()
+    private val dbRepository: DDBBRepository = DDBBRepository()
 
     private val body = mapOf(
         "imei" to "862708044011489",
@@ -50,23 +52,13 @@ class HelloController {
 
 //            val response = webServiceRepository.loginSAE(loginBody)
 
-            // Testing db
-            HibernateUtil.buildSessionFactory()
-//            HibernateUtil.openSession()
-//
-//            val session = HibernateUtil.getCurrentSession()
-//            val transaction = session.beginTransaction()
-//
-////            session.save(configurationEntity)
-//
-////            val config = session.get(ConfigurationEntity::class.java, 1)
-//            transaction.commit()
-//            session.close()
+            dbRepository.storeConfigInDB(configurationEntity)
+            val configFromDDBB: ConfigurationEntity = dbRepository.getConfigByIDDB(id = 1)
             ///////////////////////////////////////////////////////
 
-//            apiResponseLB.text = "${config.mode}"
+            apiResponseLB.text = configFromDDBB.time
 //            apiResponseLB.text = "$response"
-            apiResponseLB.text = "response"
+//            apiResponseLB.text = "response"
 
         } catch (e: Exception) {
             Log.warning("Exception: ${e.stackTraceToString()}")

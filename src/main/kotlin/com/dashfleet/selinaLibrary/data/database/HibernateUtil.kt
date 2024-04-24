@@ -54,11 +54,5 @@ class HibernateUtil {
                 sessionFactory.close()
             }
         }
-
-
-
     }
-
-
-
 }
