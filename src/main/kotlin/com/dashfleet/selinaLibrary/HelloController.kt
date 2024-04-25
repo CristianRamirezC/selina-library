@@ -8,7 +8,6 @@ import com.dashfleet.selinaLibrary.data.network.WebServiceRepository
 import javafx.fxml.FXML
 import javafx.scene.control.Label
 import kotlinx.coroutines.*
-import java.util.logging.Logger
 
 class HelloController {
     @FXML
@@ -17,7 +16,6 @@ class HelloController {
     @FXML
     private lateinit var welcomeText: Label
 
-    private val Log: Logger = Logger.getLogger(HelloController::class.java.name)
     private val webServiceRepository = WebServiceRepository()
     private val dbRepository: DDBBRepository = DDBBRepository()
 
@@ -44,7 +42,6 @@ class HelloController {
         id = 1
     )
 
-    @OptIn(DelicateCoroutinesApi::class)
     @FXML
     private fun onHelloButtonClick() {
         try {
@@ -52,7 +49,8 @@ class HelloController {
 
 //            val response = webServiceRepository.loginSAE(loginBody)
 
-            dbRepository.storeConfigInDB(configurationEntity)
+//            dbRepository.storeConfigInDB(configurationEntity)
+            dbRepository.updateConfigById(id = 1, time = "1997")
             val configFromDDBB: ConfigurationEntity = dbRepository.getConfigByIDDB(id = 1)
             ///////////////////////////////////////////////////////
 
@@ -61,7 +59,7 @@ class HelloController {
 //            apiResponseLB.text = "response"
 
         } catch (e: Exception) {
-            Log.warning("Exception: ${e.stackTraceToString()}")
+            println(e.stackTraceToString())
         }
     }
 }

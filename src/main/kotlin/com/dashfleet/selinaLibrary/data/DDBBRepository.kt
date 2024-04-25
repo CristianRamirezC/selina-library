@@ -19,7 +19,16 @@ class DDBBRepository {
         return try {
             configurationDao.getConfigurationByID(id)
         } catch (e: Exception) {
+            println(e.stackTraceToString())
             ConfigurationEntity()
+        }
+    }
+
+    fun updateConfigById(id: Int, time: String) {
+        try {
+            configurationDao.updateConfigurationById(id = id, time = time)
+        } catch (e: Exception) {
+            println(e.stackTraceToString())
         }
     }
 
