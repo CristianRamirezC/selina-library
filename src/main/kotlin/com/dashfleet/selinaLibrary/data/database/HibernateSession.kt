@@ -7,7 +7,7 @@ import org.hibernate.Transaction
 class HibernateSession {
     companion object {
         lateinit var session: Session
-        lateinit var transaction: Transaction
+        private lateinit var transaction: Transaction
 
         fun initHibernateSession() {
             HibernateUtil.buildSessionFactory()

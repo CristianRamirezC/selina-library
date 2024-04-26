@@ -24,7 +24,7 @@ class StatesEntity (
     @Column(name = "gps_datetime") val gpsDatetime: String = "",
     @Column(name = "io_door_one") val doorOneStatus: String = "",
     @Column(name = "io_door_two") val doorTwoStatus: String = "",
-    @Column(name = "io_door_tree") val doorTreeStatus: String = "",
+    @Column(name = "io_door_three") val doorThreeStatus: String = "",
     @Column(name = "io_ignition") val ignitionStatus: String = "",
     @Column(name = "io_panic") val panicStatus: String = "",
     @Column(name = "modem_network_type") val modemNetworkType: String = "",

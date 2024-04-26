@@ -1,33 +1,25 @@
 package com.dashfleet.selinaLibrary.data.database.dao
 
+import com.dashfleet.selinaLibrary.data.database.DAOUtils
 import com.dashfleet.selinaLibrary.data.database.HibernateSession
 import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
 
 class ConfigurationDao {
 
-    private val tableNameEntity = "ConfigurationEntity"
+    private val daoUtil = DAOUtils(ConfigurationEntity::class.java)
+    private val tableName = "configuration"
 
     fun getConfigurationByID(id: Int): ConfigurationEntity {
-        HibernateSession.initHibernateSession()
-        val entityToReturn = HibernateSession.session.get(ConfigurationEntity::class.java, id)
-        HibernateSession.closeHibernateSession()
-        return entityToReturn
+        return daoUtil.executeSelectById(id)
     }
 
     fun storeConfiguration(entityToStore: ConfigurationEntity) {
-        HibernateSession.initHibernateSession()
-        HibernateSession.session.save(entityToStore)
-        HibernateSession.closeHibernateSession()
+        daoUtil.executeInsert(entityToStore)
     }
 
-    fun updateConfigurationById(id: Int, time: String) {
-        HibernateSession.initHibernateSession()
-        val queryString = "UPDATE $tableNameEntity SET time =:time WHERE id =:id"
-        val query = HibernateSession.session.createQuery(queryString)
-        query.setParameter("time", time)
-        query.setParameter("id", id)
-        query.executeUpdate()
-        HibernateSession.closeHibernateSession()
+    fun updateConfigurationTimeById(id: Int, time: String) {
+        val columnName = "time"
+        daoUtil.executeUpdateById(columnName, time, id)
     }
 
 

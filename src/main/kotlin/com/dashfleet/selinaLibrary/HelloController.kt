@@ -1,13 +1,11 @@
 package com.dashfleet.selinaLibrary
 
-import com.dashfleet.selinaLibrary.data.DDBBRepository
-import com.dashfleet.selinaLibrary.data.database.HibernateUtil
+import com.dashfleet.selinaLibrary.data.database.repository.ConfigurationRepository
 import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
 import com.dashfleet.selinaLibrary.data.model.login.LoginRequestBodyModel
 import com.dashfleet.selinaLibrary.data.network.WebServiceRepository
 import javafx.fxml.FXML
 import javafx.scene.control.Label
-import kotlinx.coroutines.*
 
 class HelloController {
     @FXML
@@ -17,7 +15,7 @@ class HelloController {
     private lateinit var welcomeText: Label
 
     private val webServiceRepository = WebServiceRepository()
-    private val dbRepository: DDBBRepository = DDBBRepository()
+    private val configurationRepository: ConfigurationRepository = ConfigurationRepository()
 
     private val body = mapOf(
         "imei" to "862708044011489",
@@ -49,9 +47,9 @@ class HelloController {
 
 //            val response = webServiceRepository.loginSAE(loginBody)
 
-//            dbRepository.storeConfigInDB(configurationEntity)
-            dbRepository.updateConfigById(id = 1, time = "1997")
-            val configFromDDBB: ConfigurationEntity = dbRepository.getConfigByIDDB(id = 1)
+            configurationRepository.storeConfig(configurationEntity)
+            configurationRepository.updateConfigTimeById(id = 1, time = "2004")
+            val configFromDDBB: ConfigurationEntity = configurationRepository.getConfigByID(id = 1)
             ///////////////////////////////////////////////////////
 
             apiResponseLB.text = configFromDDBB.time
