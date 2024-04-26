@@ -7,7 +7,7 @@ import com.dashfleet.selinaLibrary.data.database.entities.StatesEntity
 class StatesDao {
 
     private val daoUtil = DAOUtils(StatesEntity::class.java)
-    private val tableName = "states"
+    private val tableNameEntity = "StatesEntity"
 
     /** Insert a state in DD BB **/
     fun storeState(entityToStore: StatesEntity) {
@@ -15,7 +15,7 @@ class StatesDao {
     }
 
     fun getAllStates(): List<StatesEntity> {
-        return daoUtil.executeSelectAll(tableName)
+        return daoUtil.executeSelectAll(tableNameEntity)
     }
 
     ////////////////////////////////GPS functions//////////////////////////////////

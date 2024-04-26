@@ -17,10 +17,10 @@ class DAOUtils<T>(entity: Class<T>) {
 
     fun executeSelectAll(tableName: String): List<T> {
         HibernateSession.initHibernateSession()
-        val queryString = "FROM :table"
+        val queryString = "FROM $tableName"
         val query = HibernateSession.session.createQuery(queryString, entityClass)
-        query.setParameter("table", tableName)
-        return query.resultList
+        val queryResult = query.resultList
+        return queryResult
     }
 
     fun executeSelectById(id: Int): T {
@@ -41,6 +41,31 @@ class DAOUtils<T>(entity: Class<T>) {
         for (entity in entitiesToStore) {
             HibernateSession.session.save(entity)
         }
+        HibernateSession.closeHibernateSession()
+    }
+
+    /** Execute a custom SELECT query by sending the query as String **/
+    fun executeCustomSelectQuery(customQuery: String): List<T> {
+        HibernateSession.initHibernateSession()
+        val query = HibernateSession.session.createQuery(customQuery, entityClass)
+        val queryResult = query.resultList
+        HibernateSession.closeHibernateSession()
+        return queryResult
+    }
+
+    /** Execute query DELETE by ID **/
+    fun executeDeleteById(id: Int) {
+        HibernateSession.initHibernateSession()
+        val entityToDelete = HibernateSession.session.load(entityClass, id)
+        HibernateSession.session.delete(entityToDelete)
+        HibernateSession.closeHibernateSession()
+    }
+
+    /** Custom INSERT, UPDATE or DELETE queries **/
+    fun executeCustomModifyingQuery(customQuery: String) {
+        HibernateSession.initHibernateSession()
+        val sqlQuery = HibernateSession.session.createNativeQuery(customQuery)
+        sqlQuery.executeUpdate()
         HibernateSession.closeHibernateSession()
     }
 }

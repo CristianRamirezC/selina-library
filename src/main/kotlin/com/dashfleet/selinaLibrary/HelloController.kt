@@ -46,15 +46,15 @@ class HelloController {
             welcomeText.text = "Welcome to JavaFX Application!"
 
 //            val response = webServiceRepository.loginSAE(loginBody)
-
-            configurationRepository.storeConfig(configurationEntity)
+//            configurationRepository.storeConfig(configurationEntity)
             configurationRepository.updateConfigTimeById(id = 1, time = "2004")
-            val configFromDDBB: ConfigurationEntity = configurationRepository.getConfigByID(id = 1)
+//            val configFromDDBB: ConfigurationEntity = configurationRepository.getConfigByID(id = 1)
+//            val configFromDDBB: List<ConfigurationEntity> = configurationRepository.getAllConfigs()
+            val configFromDDBB: Long= configurationRepository.getTransactionsQuantityByState(1)
             ///////////////////////////////////////////////////////
 
-            apiResponseLB.text = configFromDDBB.time
-//            apiResponseLB.text = "$response"
-//            apiResponseLB.text = "response"
+//            apiResponseLB.text = configFromDDBB.time
+            apiResponseLB.text = "$configFromDDBB"
 
         } catch (e: Exception) {
             println(e.stackTraceToString())
