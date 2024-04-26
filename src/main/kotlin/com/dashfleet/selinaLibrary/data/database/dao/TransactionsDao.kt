@@ -43,7 +43,7 @@ class TransactionsDao {
 
     fun getTransactionsByTypeAndLastCloseTime(type: String, lastCloseTime: Int): List<TransactionEntity> {
         val queryString = "FROM $tableNameRepository " +
-                "WHERE type =$type and " +
+                "WHERE type = $type and " +
                 "data_create >$lastCloseTime"
 
         val result = daoUtils.executeCustomSelectQuery(queryString)
@@ -68,39 +68,39 @@ class TransactionsDao {
 
     fun updateTransactionKeyByType(type: String, key: String) {
         val queryString = "UPDATE $tableNameRepository " +
-                "SET key_received =$key " +
+                "SET key_received = $key " +
                 "WHERE type =:$type"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
     fun getTransactionsByType(type: String): List<TransactionEntity> {
         val queryString = "FROM $tableNameRepository" +
-                "WHERE type =$type"
+                "WHERE type = $type"
         return daoUtils.executeCustomSelectQuery(queryString)
     }
 
     fun deleteTransactionsByType(type: String) {
         val queryString = "DELETE FROM $tableNameRepository " +
-                "WHERE type =$type"
+                "WHERE type = $type"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
     fun getTransactionsByTypeAndKey(type: String, key: String): List<TransactionEntity> {
         val queryString = "FROM transactions " +
-                "WHERE type =$type AND " +
-                "key_received =$key"
+                "WHERE type = $type AND " +
+                "key_received = $key"
         return daoUtils.executeCustomSelectQuery(queryString)
     }
 
     fun getTransactionsByState(state: Boolean): List<TransactionEntity> {
         val queryString = "FROM $tableNameRepository " +
-                "WHERE state =$state"
+                "WHERE state = $state"
         return daoUtils.executeCustomSelectQuery(queryString)
     }
 
     fun getTransactionsByRangesDate(initialDate: Long, finalDate: Long): List<TransactionEntity> {
         val queryString = "FROM transactions " +
-                "WHERE data_create >=$initialDate AND " +
+                "WHERE data_create >= $initialDate AND " +
                 "data_create <$finalDate"
         return daoUtils.executeCustomSelectQuery(queryString)
     }
@@ -111,36 +111,36 @@ class TransactionsDao {
         state: Boolean
     ): List<TransactionEntity> {
         val queryString = "FROM transactions " +
-                "WHERE data_create >=$initialDate AND " +
+                "WHERE data_create >= $initialDate AND " +
                 "data_create <$finalDate AND " +
-                "state=$state"
+                "state= $state"
         return daoUtils.executeCustomSelectQuery(queryString)
     }
 
     fun updateTransactionsStateByRangesDate(initialDate: Long, finalDate: Long, state: Boolean) {
         val queryString = "UPDATE $tableNameRepository " +
-                "SET state =$state " +
-                "WHERE data_create >=$initialDate AND " +
+                "SET state = $state " +
+                "WHERE data_create >= $initialDate AND " +
                 "data_create <$finalDate"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
     fun updateStateInAllTransactions(state: Boolean) {
         val queryString = "UPDATE $tableNameRepository " +
-                "SET state =$state"
+                "SET state = $state"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
     fun getTransactionsByClosedState(closed: Boolean): List<TransactionEntity> {
         val queryString = "FROM $tableNameRepository " +
-                "WHERE closed =$closed"
+                "WHERE closed = $closed"
         return daoUtils.executeCustomSelectQuery(queryString)
     }
 
     fun getTransactionsByDriverCodeAndClosedState(driverCode: String, closed: Boolean): List<TransactionEntity> {
         val queryString = "FROM transactions WHERE " +
-                "driver_code =$driverCode AND " +
-                "closed =$closed"
+                "driver_code = $driverCode AND " +
+                "closed = $closed"
         return daoUtils.executeCustomSelectQuery(queryString)
     }
 
@@ -150,24 +150,24 @@ class TransactionsDao {
         valid: Boolean
     ): List<TransactionEntity> {
         val queryString = "FROM $tableNameRepository " +
-                "WHERE driver_code =$driverCode " +
-                "AND closed =$closed AND " +
-                "valid =$valid"
+                "WHERE driver_code = $driverCode " +
+                "AND closed = $closed AND " +
+                "valid = $valid"
         return daoUtils.executeCustomSelectQuery(queryString)
     }
 
     fun updateTransactionClosedStatusByType(type: String, closed: Boolean) {
         val queryString = "UPDATE $tableNameRepository " +
-                "SET closed =$closed " +
-                "WHERE type =$type"
+                "SET closed = $closed " +
+                "WHERE type = $type"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
     fun updateTransactionClosedStatusByTypeAndDriverCode(type: String, driverCode: String, closed: Boolean) {
         val queryString = "UPDATE $tableNameRepository " +
-                "SET closed =$closed " +
-                "WHERE type =$type AND " +
-                "driver_code =$driverCode"
+                "SET closed = $closed " +
+                "WHERE type = $type AND " +
+                "driver_code = $driverCode"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
@@ -178,17 +178,17 @@ class TransactionsDao {
         closed: Boolean
     ) {
         val queryString = "UPDATE $tableNameRepository " +
-                "SET closed =$closed " +
-                "WHERE type =$type AND " +
-                "driver_code =$driverCode AND " +
-                "valid =$valid"
+                "SET closed = $closed " +
+                "WHERE type = $type AND " +
+                "driver_code = $driverCode AND " +
+                "valid = $valid"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
     fun updateTransactionDataById(id: Int, data: String) {
         val queryString = "UPDATE $tableNameRepository " +
-                "SET data =$data " +
-                "WHERE id =$id"
+                "SET data = $data " +
+                "WHERE id = $id"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
@@ -206,15 +206,15 @@ class TransactionsDao {
         closed: Boolean
     ) {
         val queryString = "UPDATE $tableNameRepository " +
-                "SET closed =$closed " +
-                "WHERE (type =$typeOne OR type =$typeTwo OR type =$typeThree) AND " +
-                "driver_code =$driverCode"
+                "SET closed = $closed " +
+                "WHERE (type = $typeOne OR type = $typeTwo OR type = $typeThree) AND " +
+                "driver_code = $driverCode"
         daoUtils.executeCustomModifyingQuery(queryString)
     }
 
     fun getDataCreateLastSale(typeOne: String, typeTwo: String): String {
         val queryString = "FROM $tableNameRepository " +
-                "WHERE type =$typeOne OR type =$typeTwo " +
+                "WHERE type = $typeOne OR type = $typeTwo " +
                 "ORDER BY id " +
                 "DESC LIMIT 1"
         val queryResult = daoUtils.executeCustomSelectQuery(queryString)
