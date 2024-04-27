@@ -1,6 +1,6 @@
-package com.dashfleet.selinaLibrary.data.database.repository
+package com.dashfleet.selinaLibrary.data.repository
 
-import com.dashfleet.selinaLibrary.data.database.HibernateSession
+import com.dashfleet.selinaLibrary.data.database.util.HibernateSession
 import com.dashfleet.selinaLibrary.data.database.dao.ConfigurationDao
 import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
 

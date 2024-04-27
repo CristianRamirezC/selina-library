@@ -1,4 +1,4 @@
-package com.dashfleet.selinaLibrary.data.database.repository
+package com.dashfleet.selinaLibrary.data.repository
 
 import com.dashfleet.selinaLibrary.data.database.dao.TransactionsDao
 import com.dashfleet.selinaLibrary.data.database.entities.TransactionEntity

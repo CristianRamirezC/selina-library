@@ -1,6 +1,6 @@
 package com.dashfleet.selinaLibrary
 
-import com.dashfleet.selinaLibrary.data.database.repository.ConfigurationRepository
+import com.dashfleet.selinaLibrary.data.repository.ConfigurationRepository
 import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
 import com.dashfleet.selinaLibrary.data.model.login.LoginRequestBodyModel
 import com.dashfleet.selinaLibrary.data.network.WebServiceRepository

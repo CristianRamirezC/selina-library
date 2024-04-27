@@ -1,4 +1,4 @@
-package com.dashfleet.selinaLibrary.data.database
+package com.dashfleet.selinaLibrary.data.database.util
 
 import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
 import org.hibernate.Session

@@ -1,4 +1,4 @@
-package com.dashfleet.selinaLibrary.data.database
+package com.dashfleet.selinaLibrary.data.database.util
 
 class DAOUtils<T>(entity: Class<T>) {
 

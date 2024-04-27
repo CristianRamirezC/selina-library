@@ -1,7 +1,7 @@
 package com.dashfleet.selinaLibrary.data.database.dao
 
-import com.dashfleet.selinaLibrary.data.database.DAOUtils
-import com.dashfleet.selinaLibrary.data.database.HibernateSession
+import com.dashfleet.selinaLibrary.data.database.util.DAOUtils
+import com.dashfleet.selinaLibrary.data.database.util.HibernateSession
 import com.dashfleet.selinaLibrary.data.database.entities.StatesEntity
 
 class StatesDao {

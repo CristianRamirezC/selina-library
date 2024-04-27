@@ -1,6 +1,5 @@
-package com.dashfleet.selinaLibrary.data.database
+package com.dashfleet.selinaLibrary.data.database.util
 
-import com.dashfleet.selinaLibrary.data.database.dao.ConfigurationDao
 import org.hibernate.Session
 import org.hibernate.Transaction
 
