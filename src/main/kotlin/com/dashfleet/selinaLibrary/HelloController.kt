@@ -4,6 +4,7 @@ import com.dashfleet.selinaLibrary.data.repository.ConfigurationRepository
 import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
 import com.dashfleet.selinaLibrary.data.model.login.LoginRequestBodyModel
 import com.dashfleet.selinaLibrary.data.network.WebServiceRepository
+import com.dashfleet.selinaLibrary.libraries.gps.GPSInfo
 import javafx.fxml.FXML
 import javafx.scene.control.Label
 
@@ -47,15 +48,25 @@ class HelloController {
 
 //            val response = webServiceRepository.loginSAE(loginBody)
 //            configurationRepository.storeConfig(configurationEntity)
-            configurationRepository.updateConfigTimeById(id = 1, time = "2004")
-//            val configFromDDBB: ConfigurationEntity = configurationRepository.getConfigByID(id = 1)
+//            configurationRepository.updateConfigTimeById(id = 1, time = "2004")
+            val configFromDDBB: ConfigurationEntity = configurationRepository.getConfigByID(id = 1)
 //            val configFromDDBB: List<ConfigurationEntity> = configurationRepository.getAllConfigs()
-            val configFromDDBB: Long= configurationRepository.getTransactionsQuantityByState(1)
+//            val configFromDDBB: Long= configurationRepository.getTransactionsQuantityByState(1)
             ///////////////////////////////////////////////////////
 
-//            apiResponseLB.text = configFromDDBB.time
-            apiResponseLB.text = "$configFromDDBB"
+            gpsTest()
+            apiResponseLB.text = "${configFromDDBB.time}"
 
+        } catch (e: Exception) {
+            println(e.stackTraceToString())
+        }
+    }
+
+    private fun gpsTest() {
+        try {
+            val prefix = "GP"
+            val ntypes = arrayOf("GGA", "GSV", "VTG")
+            val gpsInfo = GPSInfo(prefix, ntypes)
         } catch (e: Exception) {
             println(e.stackTraceToString())
         }

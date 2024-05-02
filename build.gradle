@@ -70,15 +70,14 @@ dependencies {
 
     implementation('javax.xml.bind:jaxb-api:2.3.1')
 
-
     //Mysql
     implementation("mysql:mysql-connector-java:8.0.16")
 
-//    implementation('javax.activation:activation:1.1')
-//    implementation('org.glassfish.jaxb:jaxb-runtime:2.3.0')
-
-
-
+    //Phantom libraries and jars
+    implementation(files("libs/quechua.jar"))
+    implementation(files("libs/RXTXcomm.jar"))
+    implementation(files("libs/slf4j-api-1.5.11.jar"))
+    implementation(files("libs/log4j-1.2.16.jar"))
 }
 
 test {

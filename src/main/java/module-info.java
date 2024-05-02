@@ -26,7 +26,10 @@ module com.dashfleet.selinaLibrary {
 //    requires java.transaction;
 //    requires java.activation;
     requires lombok;
-
+    requires log4j;
+    requires RXTXcomm;
+    requires slf4j.api;
+    requires quechua;
 
 
     opens com.dashfleet.selinaLibrary to javafx.fxml;

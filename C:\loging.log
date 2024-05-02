@@ -1,0 +1,135 @@
+16:23:48,028  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:23:48,315  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:23:48,363  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:23:48,369  INFO pooling:115 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:23:48,369  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:23:48,371  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:23:48,375  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:23:48,679  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:23:48,854  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79389f39] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:24:37,859  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:24:38,103  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:24:38,148  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:24:38,152  INFO pooling:115 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:24:38,158  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:24:38,160  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:24:38,162  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:24:38,345  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:24:38,497  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@40d887b6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:25:12,853  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:25:13,042  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:25:13,095  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:25:13,099  INFO pooling:115 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:25:13,100  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:25:13,100  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:25:13,101  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:25:13,263  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:25:13,416  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7ad368ca] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:25:37,655  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:25:37,796  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:25:37,829  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:25:37,832  INFO pooling:115 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:25:37,835  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:25:37,836  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:25:37,840  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:25:37,966  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:25:38,114  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4e9a26f9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:26:18,350  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:26:18,500  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:26:18,534  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:26:18,539  INFO pooling:115 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:26:18,542  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:26:18,542  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:26:18,546  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:26:18,696  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:26:18,834  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@78aa7379] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:34:39,319  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:34:39,546  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:34:39,591  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:34:39,594  INFO pooling:115 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:34:39,594  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:34:39,595  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:34:39,596  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:34:39,768  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:34:40,016  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f8fb263] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:43:18,629  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:43:18,839  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:43:18,887  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:43:18,890  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:43:18,891  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:43:18,892  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:43:18,899  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:43:19,029  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:43:19,193  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7a97723] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:47:40,224  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:47:40,377  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:47:40,415  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:47:40,417  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:47:40,444  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:47:40,445  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:47:40,450  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:47:40,621  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:47:40,760  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@381cc91e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:48:51,478  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:48:51,633  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:48:51,668  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:48:51,671  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:48:51,673  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:48:51,675  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:48:51,680  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:48:51,784  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:48:51,941  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1878ee1a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+16:52:59,717  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+16:52:59,874  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:52:59,910  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+16:52:59,913  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+16:52:59,913  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+16:52:59,914  INFO pooling:129 - HHH10001003: Autocommit mode: false
+16:52:59,914  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+16:53:00,099  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:53:00,236  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@31fde9d4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:07:18,454  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+17:07:18,612  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:07:18,655  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:07:18,659  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+17:07:18,660  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+17:07:18,660  INFO pooling:129 - HHH10001003: Autocommit mode: false
+17:07:18,666  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+17:07:18,789  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:07:18,956  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@58a33273] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:20:09,964  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+17:20:10,113  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:20:10,156  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:20:10,161  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+17:20:10,163  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+17:20:10,165  INFO pooling:129 - HHH10001003: Autocommit mode: false
+17:20:10,166  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+17:20:10,306  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:20:10,485  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1878ee1a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:24:31,288  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+17:24:31,471  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:24:31,521  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:24:31,527  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+17:24:31,527  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+17:24:31,528  INFO pooling:129 - HHH10001003: Autocommit mode: false
+17:24:31,540  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+17:24:31,712  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:24:31,914  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@58a33273] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:25:27,083  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+17:25:27,225  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:25:27,265  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:25:27,270  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+17:25:27,272  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+17:25:27,273  INFO pooling:129 - HHH10001003: Autocommit mode: false
+17:25:27,274  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+17:25:27,386  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:25:27,543  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@64c2772e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+17:26:41,211  INFO Version:44 - HHH000412: Hibernate ORM core version [WORKING]
+17:26:41,366  INFO Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:26:41,409  WARN pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+17:26:41,437  INFO pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/selina]
+17:26:41,439  INFO pooling:124 - HHH10001001: Connection properties: {password=****, user=root}
+17:26:41,440  INFO pooling:129 - HHH10001003: Autocommit mode: false
+17:26:41,441  INFO DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 3 (min=1)
+17:26:41,593  INFO Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:26:41,755  INFO access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@25fe7038] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
