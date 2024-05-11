@@ -8,7 +8,7 @@ import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.util.concurrent.TimeUnit
 
-class HttpRequestTest {
+class HttpRequest {
 
     companion object {
         private val httpClient: HttpClient = HttpClient.newBuilder()

@@ -3,10 +3,32 @@ package com.dashfleet.selinaLibrary.data.repository
 import com.dashfleet.selinaLibrary.data.database.util.HibernateSession
 import com.dashfleet.selinaLibrary.data.database.dao.ConfigurationDao
 import com.dashfleet.selinaLibrary.data.database.entities.ConfigurationEntity
+import com.dashfleet.selinaLibrary.data.model.configuration.ConfigRequestBodyModel
+import com.dashfleet.selinaLibrary.data.model.configuration.ConfigResponseModel
+import com.dashfleet.selinaLibrary.data.network.HttpRequest
+import com.google.gson.Gson
 
 class ConfigurationRepository {
 
     private val configurationDao = ConfigurationDao()
+    private val httpRequest: HttpRequest = HttpRequest()
+    private val gson = Gson()
+
+    //Get SAE configuration
+    fun getConfigurationSAE(getConfigurationRequestBody: ConfigRequestBodyModel): ConfigResponseModel {
+        try {
+            val endpoint = "v1/config-selina"
+            val response = httpRequest.postJSON(
+                endpoint = endpoint,
+                body = getConfigurationRequestBody
+            )
+
+            return gson.fromJson(response, ConfigResponseModel::class.java)
+        } catch (e: Exception) {
+            //TODO
+            return ConfigResponseModel()
+        }
+    }
 
     fun storeConfig(configurationToStore: ConfigurationEntity) {
         try {

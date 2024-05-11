@@ -2,11 +2,44 @@ package com.dashfleet.selinaLibrary.data.repository
 
 import com.dashfleet.selinaLibrary.data.database.dao.NotificationDao
 import com.dashfleet.selinaLibrary.data.database.entities.NotificationEntity
+import com.dashfleet.selinaLibrary.data.model.notifactions.NotificationRequestBodyModel
+import com.dashfleet.selinaLibrary.data.model.notifactions.NotificationResponseModel
+import com.dashfleet.selinaLibrary.data.model.notifactions.SendNotificationReadRequestModel
+import com.dashfleet.selinaLibrary.data.network.HttpRequest
+import com.google.gson.Gson
 
 class NotificationRepository {
 
     private val notificationDao = NotificationDao()
+    private val httpRequest: HttpRequest = HttpRequest()
+    private val gson = Gson()
 
+    fun sendNotificationReadConfirmationSAE(id: String, sendNotificationRequestBody: SendNotificationReadRequestModel) {
+        try {
+            val endpoint = "notifications/management-notification/"
+            httpRequest.putJSON(
+                body = sendNotificationRequestBody,
+                urlParameter = id,
+                endpoint = endpoint
+            )
+        } catch (e: Exception) {
+            //TODO
+        }
+    }
+
+    fun getNotificationSAE(notificationRequestBody: NotificationRequestBodyModel): NotificationResponseModel {
+        try {
+            val endpoint = "notifications/notifications-selina"
+            val response = httpRequest.postJSON(
+                body = notificationRequestBody,
+                endpoint = endpoint
+            )
+
+            return gson.fromJson(response, NotificationResponseModel::class.java)
+        } catch (e: Exception) {
+            return NotificationResponseModel()
+        }
+    }
 
     fun insertNotification(notification: NotificationEntity) {
         try {

@@ -2,10 +2,28 @@ package com.dashfleet.selinaLibrary.data.repository
 
 import com.dashfleet.selinaLibrary.data.database.dao.MessageDao
 import com.dashfleet.selinaLibrary.data.database.entities.MessageEntity
+import com.dashfleet.selinaLibrary.data.model.message.SendMessageReadRequestModel
+import com.dashfleet.selinaLibrary.data.network.HttpRequest
+import com.google.gson.Gson
 
 class MessageRepository {
 
     private val messageDao = MessageDao()
+    private val httpRequest: HttpRequest = HttpRequest()
+    private val gson = Gson()
+
+    fun sendMessageReadConfirmationSAE(id: String, sendMessageReadRequestModel: SendMessageReadRequestModel) {
+        try {
+            val endpoint = "notifications/message-tray/"
+            httpRequest.putJSON(
+                body = sendMessageReadRequestModel,
+                urlParameter = id,
+                endpoint = endpoint
+            )
+        } catch (e: Exception) {
+            //TODO
+        }
+    }
 
     fun insertMessage(message: MessageEntity) {
         try {

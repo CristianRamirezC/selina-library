@@ -2,10 +2,30 @@ package com.dashfleet.selinaLibrary.data.repository
 
 import com.dashfleet.selinaLibrary.data.database.dao.TransactionsDao
 import com.dashfleet.selinaLibrary.data.database.entities.TransactionEntity
+import com.dashfleet.selinaLibrary.data.model.transaction.TransactionRequestBodyModel
+import com.dashfleet.selinaLibrary.data.model.transaction.TransactionResponseModel
+import com.dashfleet.selinaLibrary.data.network.HttpRequest
+import com.google.gson.Gson
 
 class TransactionRepository {
 
     private val transactionDao = TransactionsDao()
+    private val httpRequest: HttpRequest = HttpRequest()
+    private val gson = Gson()
+
+    fun getTransactionSAE(getTransactionRequestBody: TransactionRequestBodyModel): TransactionResponseModel {
+        try {
+            val endpoint = "v1/frame-selina"
+            val response = httpRequest.postJSON(
+                endpoint = endpoint,
+                body = getTransactionRequestBody
+            )
+
+            return gson.fromJson(response, TransactionResponseModel::class.java)
+        } catch (e: Exception) {
+            return TransactionResponseModel()
+        }
+    }
 
     fun insertTransaction(transaction: TransactionEntity) {
         try {
